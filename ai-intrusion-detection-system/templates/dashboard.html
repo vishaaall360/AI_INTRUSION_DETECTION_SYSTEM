@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Intrusion Detection System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h1>🛡️ AI Intrusion Detection System</h1>
+
+  <form method="POST">
+    <input type="number" name="duration" placeholder="Duration" required>
+    <input type="number" name="src_bytes" placeholder="Source Bytes" required>
+    <input type="number" name="dst_bytes" placeholder="Destination Bytes" required>
+    <input type="number" name="failed_logins" placeholder="Failed Logins" required>
+    <button type="submit">Analyze Traffic</button>
+  </form>
+
+  {% if result %}
+    <div class="result {{ result }}">
+      <h2>{{ result }}</h2>
+      <p>Confidence: {{ confidence }}%</p>
+    </div>
+  {% endif %}
+</div>
+
+</body>
+</html>

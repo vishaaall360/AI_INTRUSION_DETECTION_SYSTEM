@@ -1,0 +1,6 @@
+duration,src_bytes,dst_bytes,failed_logins,label
+10,300,150,0,normal
+2,1000,50,1,attack
+5,200,500,0,normal
+1,5000,10,1,attack
+8,350,200,0,normal
